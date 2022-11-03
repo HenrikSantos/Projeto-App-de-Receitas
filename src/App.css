@@ -1,0 +1,125 @@
+.start-btn {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+
+.carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-block;
+  width: 41%;
+}
+
+.item img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.lineThrough {
+  text-decoration: line-through solid black;
+}
+
+.recipe-img {
+  max-width: 120% !important;
+  width: 100%;
+  margin: 0;
+}
+
+button {
+  border: 0;
+}
+
+.recipe-item {
+  opacity: 90%;
+  -webkit-box-shadow: 0px 6px 15px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 6px 15px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 6px 15px 0px rgba(66, 68, 90, 1);
+  border: 1px;
+  border-radius: 7px;
+}
+
+.recipe-item:hover {
+  opacity: 100%;
+}
+
+.recipe-detail-img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+/* Container holding the image and the text */
+.recipe-container {
+  position: relative;
+  text-align: center;
+  color: #FCC436;
+  text-decoration: line-through;
+}
+
+.recipe-container img {
+  opacity: 100%;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-align: left;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  text-align: right;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.4rem;
+}
+
+.top-right button {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.top-right button img {
+  width: 30px;
+  filter: invert(88%) sepia(30%) saturate(1816%) hue-rotate(329deg) brightness(104%) contrast(102%);
+}
+
+.instructions {
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+}
