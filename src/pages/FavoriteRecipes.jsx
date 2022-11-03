@@ -52,8 +52,9 @@ export default function FavoriteRecipes() {
   return (
     <div>
       <Header title="Favorite Recipes" hasSearchIcon={ false } />
-      <div>
+      <div className="row justify-content-between">
         <button
+          className="btn btn-danger col-10 mx-auto my-2"
           data-testid="filter-by-all-btn"
           type="button"
           onClick={ handleFilterByAll }
@@ -61,6 +62,7 @@ export default function FavoriteRecipes() {
           All
         </button>
         <button
+          className="btn btn-danger col-10 mx-auto my-2"
           data-testid="filter-by-meal-btn"
           type="button"
           onClick={ handleFilterByMeal }
@@ -68,6 +70,7 @@ export default function FavoriteRecipes() {
           Meals
         </button>
         <button
+          className="btn btn-danger col-10 mx-auto my-2"
           data-testid="filter-by-drink-btn"
           type="button"
           onClick={ handleFilterByDrink }
@@ -80,38 +83,43 @@ export default function FavoriteRecipes() {
           <p>Link copied!</p>
         )}
         {favoriteRecipes?.map((el, index) => (
-          <div key={ el.name }>
-            <button type="button" onClick={ () => goToDetailPage(el) }>
+          <div key={ el.name } className="row border rounded m-4">
+            <button type="button" className="col-6" onClick={ () => goToDetailPage(el) }>
               <img
                 src={ el.image }
                 data-testid={ `${index}-horizontal-image` }
                 alt="imagem da receita"
-              />
-              <p data-testid={ `${index}-horizontal-name` }>{el.name}</p>
+                />
             </button>
-            <p data-testid={ `${index}-horizontal-top-text` }>{el.category}</p>
-            <p data-testid={ `${index}-horizontal-done-date` }>{el.doneDate}</p>
-            <button
-              type="button"
-              onClick={ () => handleShareButton(el) }
-            >
-              <img
-                data-testid={ `${index}-horizontal-share-btn` }
-                src={ shareIcon }
-                alt="compartilhar"
-              />
-            </button>
-            <button type="button" onClick={ () => unfavoriteRecipe(el) }>
-              <img
-                data-testid={ `${index}-horizontal-favorite-btn` }
-                src={ blackHeartIcon }
-                alt="favoritar"
-              />
-            </button>
-            <p data-testid={ `${index}-horizontal-top-text` }>
-              {`${el.nationality} - ${el.category}`}
-            </p>
-            <p data-testid={ `${index}-horizontal-top-text` }>{el.alcoholicOrNot}</p>
+              <div className="col-6">
+                <p data-testid={ `${index}-horizontal-name`} className="text-center fs-2" ><b>{el.name}</b></p>
+
+                <p data-testid={ `${index}-horizontal-top-text` }>
+                  {`${el.category}`}
+                </p>
+                
+                <p data-testid={ `${index}-horizontal-top-text` }>
+                  {`${el.nationality}`}
+                </p>
+                <p data-testid={ `${index}-horizontal-top-text` }>{el.alcoholicOrNot}</p>
+                <button
+                  type="button"
+                  onClick={ () => handleShareButton(el) }
+                  >
+                  <img
+                    data-testid={ `${index}-horizontal-share-btn` }
+                    src={ shareIcon }
+                    alt="compartilhar"
+                    />
+                </button>
+                <button type="button" onClick={ () => unfavoriteRecipe(el) }>
+                  <img
+                    data-testid={ `${index}-horizontal-favorite-btn` }
+                    src={ blackHeartIcon }
+                    alt="favoritar"
+                  />
+                </button>
+              </div>
           </div>
         ))}
       </div>
