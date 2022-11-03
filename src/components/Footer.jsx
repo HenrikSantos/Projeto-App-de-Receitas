@@ -6,7 +6,7 @@ import drink from '../images/drink.svg';
 
 export default function Footer() {
   return (
-    <footer data-testid="footer" className="row fixed-bottom justify-content-center py-1" style={{background: '#41197F'}}>
+    <footer data-testid="footer" className="row fixed-bottom justify-content-center" style={{background: '#41197F'}}>
       <Link to="/drinks" className='col-6 row justify-content-center'>
         <img
           src={ drink }

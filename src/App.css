@@ -4,7 +4,6 @@
   right: 0;
 }
 
-
 .carousel {
   overflow-x: scroll;
   overflow-y: hidden;
@@ -122,4 +121,8 @@ button {
 
 img {
   max-width: 100%;
+}
+
+.row {
+  margin-right: 0 !important;
 }

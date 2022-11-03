@@ -188,7 +188,7 @@ export default function RecipeInProgress({ apiType, id }) {
             ))}
             <p data-testid="instructions">{ singleData?.[0].strInstructions }</p>
           </div>
-          <div className="row">
+          <div className="row mb-5">
             <button
               type="button"
               className="col-10 mx-auto btn btn-danger"
