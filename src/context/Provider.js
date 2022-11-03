@@ -50,7 +50,7 @@ function Provider({ children }) {
         setData(filtredArr);
       }
     } catch (error) {
-      global.alert('Sorry, we haven\'t found any recipes for these filters.');
+      console.log(error.message)
     }
   };
 
@@ -68,7 +68,7 @@ function Provider({ children }) {
         setCategories(apiCategoriesData.drinks);
       }
     } catch (error) {
-      global.alert('Error to fetch categories');
+      console.log(error.message)
     }
   };
 
@@ -96,7 +96,7 @@ function Provider({ children }) {
         setCategoriesData(filtredArr);
       }
     } catch (error) {
-      global.alert('Sorry, we haven\'t found any recipes for these filters.');
+      console.log(error.message)
     }
   };
 
@@ -113,7 +113,7 @@ function Provider({ children }) {
         setSingleData(apiData.drinks);
       }
     } catch (error) {
-      global.alert('erro');
+      console.log(error.message)
     }
   };
 
@@ -135,7 +135,7 @@ function Provider({ children }) {
         setRecomendation(filtredArr);
       }
     } catch (error) {
-      global.alert('erro');
+      console.log(error.message)
     }
   };
 
