@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import tomato from '../images/tomato.svg';
+import icon from '../images/icon.svg';
 
 function Login({ history }) {
   const [email, setEmail] = useState('');
@@ -24,8 +26,10 @@ function Login({ history }) {
   };
 
   return (
-    <>
+    <div className="row justify-content-center">
+      <img src={ icon } style={{width: '20rem'}} alt="icone" />
       <input
+        className="col-10 rounded"
         type="text"
         placeholder="email"
         data-testid="email-input"
@@ -33,6 +37,7 @@ function Login({ history }) {
         onChange={ (event) => handleChange(event, setEmail) }
       />
       <input
+        className="col-10 mt-2 rounded"
         type="password"
         placeholder="password"
         data-testid="password-input"
@@ -40,6 +45,7 @@ function Login({ history }) {
         onChange={ (event) => handleChange(event, setPassword) }
       />
       <button
+        className="col-10 mt-2 btn btn-primary"
         type="button"
         data-testid="login-submit-btn"
         disabled={ !validateLogin() }
@@ -47,7 +53,8 @@ function Login({ history }) {
       >
         Enter
       </button>
-    </>
+      <img src={ tomato } alt="tomato" />
+    </div>
   );
 }
 
