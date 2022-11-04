@@ -27,33 +27,39 @@ function Login({ history }) {
 
   return (
     <div className="row justify-content-center">
-      <img src={ icon } style={{width: '20rem'}} alt="icone" />
-      <input
-        className="col-10 rounded"
-        type="text"
-        placeholder="email"
-        data-testid="email-input"
-        value={ email }
-        onChange={ (event) => handleChange(event, setEmail) }
-      />
-      <input
-        className="col-10 mt-2 rounded"
-        type="password"
-        placeholder="password"
-        data-testid="password-input"
-        value={ password }
-        onChange={ (event) => handleChange(event, setPassword) }
-      />
-      <button
-        className="col-10 mt-2 btn btn-primary"
-        type="button"
-        data-testid="login-submit-btn"
-        disabled={ !validateLogin() }
-        onClick={ handleClick }
-      >
-        Enter
-      </button>
-      <img src={ tomato } alt="tomato" />
+      <div  className="mt-5 col-12 row justify-content-center">
+        <img src={ icon } style={{width: '30rem'}} alt="icone" />
+      </div>
+      <div className="row col-sm col-sm-5 justify-content-center">
+        <input
+          className="col-10 col-sm-12 text-sm-center rounded"
+          type="text"
+          placeholder="Email"
+          data-testid="email-input"
+          value={ email }
+          onChange={ (event) => handleChange(event, setEmail) }
+        />
+        <input
+          className="col-10 mt-2 col-sm-12 text-sm-center rounded"
+          type="password"
+          placeholder="Password"
+          data-testid="password-input"
+          value={ password }
+          onChange={ (event) => handleChange(event, setPassword) }
+        />
+        <button
+          className="col-10 mt-2 btn col-sm-12 text-sm-center btn-primary"
+          type="button"
+          data-testid="login-submit-btn"
+          disabled={ !validateLogin() }
+          onClick={ handleClick }
+          >
+          Enter
+        </button>
+      </div>
+      <div className="col-12 d-sm-none">
+      <img src={ tomato } alt="tomato" className="col-12" />
+      </div>
     </div>
   );
 }
