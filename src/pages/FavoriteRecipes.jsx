@@ -50,11 +50,12 @@ export default function FavoriteRecipes() {
   }, [favoriteRecipes]);
 
   return (
-    <div>
+    <div className='row align-items-start'>
       <Header title="Favorite Recipes" hasSearchIcon={ false } />
-      <div className="row justify-content-between">
+      <div className="row justify-content-center my-4 col-12 col-lg-3">
+        <h3>Filter:</h3>
         <button
-          className="btn btn-danger col-10 mx-auto my-2"
+          className="btn btn-danger col-10 my-2"
           data-testid="filter-by-all-btn"
           type="button"
           onClick={ handleFilterByAll }
@@ -62,7 +63,7 @@ export default function FavoriteRecipes() {
           All
         </button>
         <button
-          className="btn btn-danger col-10 mx-auto my-2"
+          className="btn btn-danger col-10 my-2"
           data-testid="filter-by-meal-btn"
           type="button"
           onClick={ handleFilterByMeal }
@@ -70,7 +71,7 @@ export default function FavoriteRecipes() {
           Meals
         </button>
         <button
-          className="btn btn-danger col-10 mx-auto my-2"
+          className="btn btn-danger col-10 my-2"
           data-testid="filter-by-drink-btn"
           type="button"
           onClick={ handleFilterByDrink }
@@ -78,12 +79,12 @@ export default function FavoriteRecipes() {
           Driks
         </button>
       </div>
-      <div>
+      <div className='col-12 col-lg-9 row mt-3 justify-content-evenly'>
         { showCopyMessage && (
           <p>Link copied!</p>
         )}
         {favoriteRecipes?.map((el, index) => (
-          <div key={ el.name } className="row border rounded m-4">
+          <div key={ el.name } className="row border rounded col-12 col-md-5">
             <button type="button" className="col-6" onClick={ () => goToDetailPage(el) }>
               <img
                 src={ el.image }
