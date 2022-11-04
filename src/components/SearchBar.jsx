@@ -15,15 +15,15 @@ export default function SearchBar({ title }) {
 
   return (
     <div
-      className="row p-2 m-2 justify-content-center"
+      className="row justify-content-center my-2 py-2 col-lg-10 py-lg-4"
       style={{ background: '#41197F', color: 'white', borderRadius: '7px', border: 'solid purple 1px' }}
     >
       {
         (title) && (
-          <h1 data-testid="page-title" className="ms-2">{title}</h1>
+          <h1 data-testid="page-title" className="ms-1 fs-1">{title}:</h1>
         )
       }
-      <div className="col-10 justify-content-center align-content-center row">
+      <div className="col-12 justify-content-center align-content-center row">
         <input
           type="text"
           placeholder="Search"
@@ -40,9 +40,8 @@ export default function SearchBar({ title }) {
         >
           Search
         </button>
-      </div>
-      <div className="col-10 mx-auto">
-        <label className="mx-3" htmlFor="name">
+      <div className="col-12 fs-3">
+        <label className="ms-1 col-12" htmlFor="name">
           <input
             type="radio"
             name="radioFilter"
@@ -53,7 +52,7 @@ export default function SearchBar({ title }) {
             />
             &nbsp;Name
         </label>
-        <label className="mx-3" htmlFor="ingredient">
+        <label className="ms-1 col-12" htmlFor="ingredient">
           <input
             type="radio"
             name="radioFilter"
@@ -64,7 +63,7 @@ export default function SearchBar({ title }) {
             />
             &nbsp;Ingredient
         </label>
-        <label className="mx-3" htmlFor="firstLetter">
+        <label className="ms-1 col-12" htmlFor="firstLetter">
           <input
             type="radio"
             name="radioFilter"
@@ -75,6 +74,7 @@ export default function SearchBar({ title }) {
             />
             &nbsp;First letter
         </label>
+      </div>
       </div>      
     </div>
   );

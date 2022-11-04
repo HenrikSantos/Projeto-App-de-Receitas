@@ -14,13 +14,13 @@ export default function Recipes() {
   return (
     <div>
       <Filter />
-      <div className="row justify-content-evenly m-3">
+      <div className="row justify-content-between container mx-auto m-3 mb-5">
         {
           categoriesData[0] ? (
             categoriesData?.map((recipe, i) => (
               <button
                 type="button"
-                className="mb-3 col-5 recipe-item"
+                className="mb-5 mb-lg-5 col-5 col-lg-3 m-lg-3 recipe-item"
                 data-testid={ `${i}-card-button` }
                 onClick={ () => changeToDetail(recipe) }
                 key={ recipe[`id${apiTypeUp}`] }
@@ -37,7 +37,7 @@ export default function Recipes() {
           ) : (
             data?.map((recipe, index) => (
               <button
-                className="mb-3 col-5 recipe-item"
+                className="mb-5 mb-lg-5 col-5 col-lg-3 m-lg-3 recipe-item"
                 type="button"
                 data-testid={ `${index}-card-button` }
                 onClick={ () => changeToDetail(recipe) }

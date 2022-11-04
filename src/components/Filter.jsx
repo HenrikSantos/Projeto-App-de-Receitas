@@ -27,11 +27,11 @@ export default function Filter() {
         type="button"
         data-testid="All-category-filter"
         onClick={ () => all() }
-        className="btn btn-danger col-11 m-1"
+        className="btn btn-danger col-10 my-3"
       >
         All
       </button>
-      <div className="row col-12 justify-content-evenly">
+      <div className="row col-10 justify-content-between">
         {
           categories?.map((category, index) => {
             if (index >= MAX_CATEGORY_SIZE) {
