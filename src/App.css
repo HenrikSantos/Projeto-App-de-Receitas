@@ -54,6 +54,12 @@ button {
   overflow: hidden;
 }
 
+.fav-and-share {
+  background-color: rgba(255, 255, 255, 0);
+  width: 50px;
+  filter: invert(88%) sepia(30%) saturate(1816%) hue-rotate(329deg) brightness(104%) contrast(102%);
+}
+
 /* Container holding the image and the text */
 .recipe-container {
   position: relative;
@@ -108,11 +114,6 @@ button {
 
 .top-right button {
   background-color: rgba(255, 255, 255, 0);
-}
-
-.top-right button img {
-  width: 30px;
-  filter: invert(88%) sepia(30%) saturate(1816%) hue-rotate(329deg) brightness(104%) contrast(102%);
 }
 
 .instructions {

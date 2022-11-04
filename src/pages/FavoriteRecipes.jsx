@@ -105,14 +105,19 @@ export default function FavoriteRecipes() {
                 <button
                   type="button"
                   onClick={ () => handleShareButton(el) }
-                  >
+                  className="fav-and-share"
+                >
                   <img
                     data-testid={ `${index}-horizontal-share-btn` }
                     src={ shareIcon }
                     alt="compartilhar"
                     />
                 </button>
-                <button type="button" onClick={ () => unfavoriteRecipe(el) }>
+                <button
+                  type="button"
+                  onClick={ () => unfavoriteRecipe(el) }
+                  className="fav-and-share"
+                >
                   <img
                     data-testid={ `${index}-horizontal-favorite-btn` }
                     src={ blackHeartIcon }

@@ -96,11 +96,11 @@ export default function RecipeDetails({ apiType, id }) {
               {singleData?.[0].strAlcoholic}
             </h3>
             <div className="top-right">
-              <button type="button" data-testid="share-btn" onClick={ handleShareButton }>
+              <button type="button" className="fav-and-share" data-testid="share-btn" onClick={ handleShareButton }>
                 <img src={ shareImg } alt="compartilhar" />
               </button>
 
-              <button type="button" onClick={ handleFavoriteButton }>
+              <button type="button" className="fav-and-share" onClick={ handleFavoriteButton }>
                 <img
                   data-testid="favorite-btn"
                   src={
